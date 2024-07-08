@@ -1,0 +1,11 @@
+
+
+.page-title{
+    line-height: 40px; border-bottom: 2px solid gray;
+    margin-bottom: 20px;
+}
+
+.scrollable {
+    height: 400px;
+    overflow: scroll;
+}

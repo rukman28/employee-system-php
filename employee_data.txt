@@ -1,0 +1,9 @@
+1	Rukman	1986-01-28	Negombo Kochchikade	0784938992
+2	dilan	1990-03-15	Colombo	0785838432
+3	Kumara	1991-08-18	Kandy	0783738978
+4	dilan	1982-05-23	Ethgala, Kochchikade	0745895541
+5	Ruwan	1999-05-21	Nuwara eliya	0789654323
+6	asd	1999-05-21	Kattana	0789654323
+8	dhdfg	1982-05-23	dgertetrdsfgdsg	0783738978
+9	hjfghjfgh	1982-05-23	wrwerdsf	0745895541
+10	qweada	1999-05-21	Colombo	0342353454
