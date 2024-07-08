@@ -22,5 +22,25 @@ if (!$results) {
     fclose($handle);
 
     header('Refresh:3;url=index.php');
-    echo "Employee data write is successful..!\n";
-}
+    require('../include/html_head.php');
+
+?>
+
+    <body>
+        <?php
+        include('../include/header.php');
+        ?>
+        <main>
+
+        <?php
+        echo '<div class="alert alert-success" role="alert">';
+        echo "Employee data write is successful..!\n";
+        echo '</div>';
+    }
+
+        ?>
+
+        </main>
+    </body>
+
+    </html>

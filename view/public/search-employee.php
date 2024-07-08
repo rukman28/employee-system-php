@@ -82,6 +82,8 @@ require('../include/html_head.php');
                 </div>
 
                 <!-- <button type="submit" class="btn btn-info mt-2">Save</button> -->
+                <a href="delete-employee.php?id=<?= $row['id']; ?>" class="btn btn-danger mt-2">delete</a>
+
 
             </form>
             <!-- Form End of show Employee data -->
