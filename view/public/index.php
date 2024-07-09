@@ -29,7 +29,7 @@ require('../include/html_head.php');
                             <th>Name</th>
                             <th>DOB</th>
                             <th>Address</th>
-                            <th>Tele</th>
+                            <th>Telephone</th>
                             <th>Action</th>
 
                         </tr>

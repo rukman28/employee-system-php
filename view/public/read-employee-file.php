@@ -10,9 +10,39 @@ require('../include/html_head.php');
     ?>
     <main>
         <div class="container">
-            <h3 class="page-title">Employee list
-                <a href="index.php" class="btn btn-success float-end">Employee List</a>
-            </h3>
+            <div class="page-title">
+                <div class="d-flex justify-content-between border border-danger border-3">
+                    <div class="border border-primary border-3">
+                        <h3>Employee list </h3>
+                    </div>
+
+                    <div class="d-flex border border-info border-3">
+                        <div>
+                            <form action="" class="d-flex justify-content-around ">
+                                <div class="form-check d-flex align-items-center form-check-inline">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                    <label class="form-check-label me-3" for="flexRadioDefault1 ">
+                                        Default radio
+                                    </label>
+                                </div>
+                                <div class="form-check d-flex align-items-center form-check-inline">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                    <label class="form-check-label me-2" for="flexRadioDefault2">
+                                        Default checked radio
+                                    </label>
+                                </div>
+                                <div>
+                                    <a href="populate-db.php" class="btn btn-info float-end me-3">Load</a>
+                                </div>
+                            </form>
+                        </div>
+                        <div>
+                            <a href="index.php" class="btn btn-success float-end">Employee List</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
 
             <!-- Table Start Employee data -->
             <div class="scrollable">
