@@ -29,41 +29,43 @@ require('../include/html_head.php');
 
                 <div class="input-group mb-3 w-25">
 
-                    <input type="text" name="id" class="form-control" placeholder="Employee ID" aria-label="Employee Number" aria-describedby="basic-addon1">
+                    <input type="number" name="id" class="form-control" placeholder="Employee ID" aria-label="Employee Number" aria-describedby="basic-addon1">
                     <button type="submit" class="btn btn-info btn-md">Search</button>
 
                 </div>
                 <!-- End of search box with button -->
-
-                <?php
-                if (!empty($_POST['id'])) {
-                    $row = $result->fetchArray(SQLITE3_ASSOC);
-                    if ($row == false) {
-                ?>
-                        <div class="alert alert-danger">
-                            <?php
-                            echo "Employee ID <strong>" . $_POST['id'] . "</strong> does not exist..!";
-                            ?>
-                        </div>
-                    <?php
-                    } else {
-                    ?>
-                        <div class="alert alert-success">
-                            <?php
-                            echo "Employee ID <strong>" . $_POST['id'] . "</strong> exist..!";
-                            ?>
-                        </div>
-                <?php
-
-                    }
-                }
-                ?>
-
             </form>
+
+
+            <?php
+            if (!empty($_POST['id'])) //
+            {
+                $row = $result->fetchArray(SQLITE3_ASSOC);
+                if ($row == false) {
+            ?>
+                    <div class="alert alert-danger">
+                        <?php
+                        echo "Employee ID <strong>" . $_POST['id'] . "</strong> does not exist..!";
+                        ?>
+                    </div>
+                <?php
+                } else {
+                ?>
+                    <div class="alert alert-success">
+                        <?php
+                        echo "Employee ID <strong>" . $_POST['id'] . "</strong> exist..!";
+                        ?>
+                    </div>
+            <?php
+
+                }
+            }
+            ?>
+
 
             <!-- Form show Employee data -->
 
-            <form action="save-employee.php" method="post">
+            <form action="delete-employee.php" method="post">
                 <div class="form-group">
                     <label>Name</label>
                     <input type="text" name="name" class="form-control" disabled value="<?php echo empty($row) ? '' : $row['name']; ?>">
@@ -82,7 +84,15 @@ require('../include/html_head.php');
                 </div>
 
                 <!-- <button type="submit" class="btn btn-info mt-2">Save</button> -->
-                <a href="delete-employee.php?id=<?= $row['id']; ?>" class="btn btn-danger mt-2">delete</a>
+                <?php
+                if (!empty($_POST['id'])) {
+                ?>
+                    <input type="text" name="id" id="" hidden value="<?= $_POST['id'] ?>">
+                <?php
+                }
+                ?>
+                <button type="submit" class="btn btn-danger mt-2" <?= empty($row) ? 'disabled' : '' ?>>Delete</button>
+
 
 
             </form>

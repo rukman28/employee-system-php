@@ -18,7 +18,7 @@ require('../include/html_head.php');
             <form action="save-employee.php" method="post">
                 <div class="form-group">
                     <label>Name</label>
-                    <input type="text" name="name" class="form-control" required maxlength="20">
+                    <input type="text" name="name" class="form-control" required maxlength="50" pattern="[A-Za-z ]{1,50}">
                 </div>
                 <div class="form-group">
                     <label>Date Of Birth</label>
@@ -30,7 +30,7 @@ require('../include/html_head.php');
                 </div>
                 <div class="form-group">
                     <label>Telephone</label>
-                    <input type="text" placeholder="0786789772" name="tele" class="form-control" required pattern="^[0]{1}[7]{1}[01245678]{1}[0-9]{7}">
+                    <input type="tel" placeholder="078-6789772" name="tele" class="form-control" required pattern="[0-9]{3}-[0-9]{7}">
                 </div>
 
                 <button type="submit" class="btn btn-info mt-2">Save</button>

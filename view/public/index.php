@@ -49,7 +49,10 @@ require('../include/html_head.php');
                                 <td><?= $row['address'] ?></td>
                                 <td><?= $row['tele'] ?></td>
                                 <td>
-                                    <a href="delete-employee.php?id=<?= $row['id']; ?>" class="btn btn-danger">delete</a>
+                                    <form action="delete-employee.php" method="post">
+                                        <input type="text" name="id" id="" hidden value="<?= $row['id'] ?>">
+                                        <button type="submit" class="btn btn-danger">Delete</button>
+                                    </form>
                                 </td>
                             </tr>
                         <?php
