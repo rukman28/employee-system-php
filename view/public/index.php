@@ -1,5 +1,5 @@
 <?php
-require_once('../../database/db_config.php');
+require('../../database/db_config.php');
 require('../include/html_head.php');
 ?>
 
