@@ -18,21 +18,21 @@ require('../include/html_head.php');
 
                     <div class="d-flex border border-info border-3">
                         <div>
-                            <form action="" class="d-flex justify-content-around ">
+                            <form action="populate-db.php" method="post" class="d-flex justify-content-around ">
                                 <div class="form-check d-flex align-items-center form-check-inline">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                    <label class="form-check-label me-3" for="flexRadioDefault1 ">
-                                        Default radio
+                                    <input class="form-check-input" value="clean" type="radio" name="db" id="flexRadioDefault1">
+                                    <label class="form-check-label me-3" for="db">
+                                        Clean Load
                                     </label>
                                 </div>
                                 <div class="form-check d-flex align-items-center form-check-inline">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                                    <label class="form-check-label me-2" for="flexRadioDefault2">
-                                        Default checked radio
+                                    <input class="form-check-input" value="append" type="radio" name="db" id="flexRadioDefault2" checked>
+                                    <label class="form-check-label me-2" for="db">
+                                        Append Load
                                     </label>
                                 </div>
                                 <div>
-                                    <a href="populate-db.php" class="btn btn-info float-end me-3">Load</a>
+                                    <button type="submit" class="btn btn-info float-end me-3">Load</button>
                                 </div>
                             </form>
                         </div>

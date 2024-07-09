@@ -16,7 +16,7 @@ if (!$results) {
         fwrite($handle, $row['name'] . "\t");
         fwrite($handle, $row['dob'] . "\t");
         fwrite($handle, $row['address'] . "\t");
-        fwrite($handle, $row['tele'] . "\n");
+        fwrite($handle, $row['tele']);
     }
 
     fclose($handle);
