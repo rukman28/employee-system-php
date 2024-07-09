@@ -21,8 +21,19 @@ require('../include/html_head.php');
                     <input type="text" name="name" class="form-control" required maxlength="50" pattern="[A-Za-z ]{1,50}">
                 </div>
                 <div class="form-group">
-                    <label>Date Of Birth</label>
-                    <input type="date" name="dob" class="form-control" required>
+
+                    <?php
+                    /*
+                    *
+                    * Find the date 18 years before from today and store it in the DateTime object $date and use the date_formate function to spit the date 18 years before to the date * time picker
+                    */
+                    $date = date_create("today");
+                    date_sub($date, date_interval_create_from_date_string("18 years"));
+                    ?>
+                    <!-- end of date calculation -->
+
+                    <label>Date Of Birth
+                        <input type="date" name="dob" class="form-control" max="<?= date_format($date, "Y-m-d") ?>" required></label>
                 </div>
                 <div class="form-group">
                     <label>Address</label>

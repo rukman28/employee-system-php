@@ -37,15 +37,23 @@ require('../include/html_head.php');
 
                     <tbody>
                         <?php
-                        $sql = "SELECT * FROM employees";
+                        $sql = "SELECT id,name,dob,address,tele FROM employees";
 
                         $results = $db->query($sql);
                         while ($row = $results->fetchArray(SQLITE3_ASSOC)) {
+                            /*
+                            //Calculate the Age of the employee using DateTime class
+                            */
+                            $from = new DateTime($row['dob']);
+                            $to = new DateTime('today');
+                            $age = $from->diff($to)->y;
+
+                            //end of age calculation
                         ?>
                             <tr>
                                 <td><?= $row['id'] ?></td>
                                 <td><?= $row['name'] ?></td>
-                                <td><?= $row['dob'] ?></td>
+                                <td><?= $age ?></td>
                                 <td><?= $row['address'] ?></td>
                                 <td><?= $row['tele'] ?></td>
                                 <td>
