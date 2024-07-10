@@ -4,7 +4,7 @@ require_once('../../database/db_config.php');
 require('../include/html_head.php');
 
 
-//check if the file read is a clean load or append load to the employees table using the radio button values.
+//check if the file read is a "clean load" or "append load" to the employees table using the radio button values.
 if ($_POST['db'] === 'clean') {
     $sql = 'DELETE FROM employees';
 
@@ -33,5 +33,16 @@ if ($file) {
 }
 
 fclose($file); //Close the open file
+?>
 
-echo "Employee data have been loaded successfully..!";
+<body>
+    <?php include('../include/header.php'); ?>
+    <main>
+        <div class="alert alert-success" role="alert">
+            Employee data have been loaded successfully..!
+        </div>
+    </main>
+    <!-- <?php include('../include/footer.php'); ?> -->
+</body>
+
+</html>

@@ -25,7 +25,9 @@ require('../include/html_head.php');
                     <?php
                     /*
                     *
-                    * Find the date 18 years before from today and store it in the DateTime object $date and use the date_formate function to spit the date 18 years before to the date * time picker
+                    * Find the date 18 years before from today and store it in the DateTime object using 
+                    * $date variable and use the date_formate function to spit the exact date out 18 years 
+                    * before to the date time picker
                     */
                     $date = date_create("today");
                     date_sub($date, date_interval_create_from_date_string("18 years"));
@@ -41,7 +43,7 @@ require('../include/html_head.php');
                 </div>
                 <div class="form-group">
                     <label>Telephone</label>
-                    <input type="tel" placeholder="078-6789772" name="tele" class="form-control" required pattern="[0-9]{3}-[0-9]{7}">
+                    <input type="tel" placeholder="078-6789772" name="tele" class="form-control" maxlength="11" required pattern="[0-9]{3}-[0-9]{7}">
                 </div>
 
                 <button type="submit" class="btn btn-info mt-2">Save</button>
