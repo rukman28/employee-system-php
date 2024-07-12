@@ -16,7 +16,7 @@ if ($_POST['db'] === 'clean') {
 
 
 //Open the file employee_data.txt to load employee data to the database
-$filePath = "../../employee_data.txt";
+$filePath = "text-file/employee_data.txt";
 
 $file = fopen($filePath, "r");
 if ($file) {

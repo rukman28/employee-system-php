@@ -1,6 +1,6 @@
 <?php
 require('../include/html_head.php');
-$filePath = "../../employee_data.txt"; //Set the file path first to use throught out the page
+$filePath = "text-file/employee_data.txt"; //Set the file path first to use throught out the page
 
 /*
 ** Below if condition is used to check if the file already exists. If the file does not exist it will create a file so there is a file to access by the below actions 

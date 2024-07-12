@@ -9,7 +9,8 @@ if (!$results) {
     echo $db->lastErrorMsg();
 } else {
 
-    $handle = fopen("../../employee_data.txt", "w");
+    $handle = fopen("text-file/employee_data.txt", "w");
+    // $handle = fopen("../../employee_data.txt", "w");
 
     while ($row = $results->fetchArray(SQLITE3_ASSOC)) {
         fwrite($handle, $row['id'] . "\t");
