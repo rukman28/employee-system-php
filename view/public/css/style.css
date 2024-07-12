@@ -6,7 +6,7 @@
 }
 
 .scrollable {
-    height: 400px;
+    height: 700px;
     overflow-y: auto;
     scroll-snap-type: y mandatory;
 }

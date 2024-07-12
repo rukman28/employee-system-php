@@ -1,4 +1,4 @@
-<footer>
+<footer class="mt-5">
     <div class="text-center">
 
         Copyright &copy; 2024 - All rights reserved by R B Fernando
