@@ -30,14 +30,14 @@ require('../include/html_head.php');
                             <th>DOB</th>
                             <th>Address</th>
                             <th>Telephone</th>
-                            <th>Action</th>
+                            <th class="text-center">Action</th>
 
                         </tr>
                     </thead>
 
                     <tbody>
                         <?php
-                        $sql = "SELECT id,name,dob,address,tele FROM employees";
+                        $sql = "SELECT * FROM employees";
 
                         $results = $db->query($sql);
                         while ($row = $results->fetchArray(SQLITE3_ASSOC)) {
@@ -56,10 +56,11 @@ require('../include/html_head.php');
                                 <td><?= $age ?></td>
                                 <td><?= $row['address'] ?></td>
                                 <td><?= $row['tele'] ?></td>
-                                <td>
+                                <td class="text-center">
                                     <form action="delete-employee.php" method="post">
                                         <input type="text" name="id" id="" hidden value="<?= $row['id'] ?>">
                                         <button type="submit" class="btn btn-danger">Delete</button>
+                                        <a href="edit-employee.php?id=<?= $row['id'] ?>" class="btn btn-warning">Edit</a>
                                     </form>
                                 </td>
                             </tr>
