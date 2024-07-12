@@ -7,9 +7,21 @@
 
 .scrollable {
     height: 400px;
-    overflow: scroll;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
 }
 
 .gap{
     margin:20px;
   }
+
+
+.table th{
+    background-color: #a991c5;
+    position: sticky;
+    top: 0;
+}
+
+.table tr{
+    scroll-snap-align: start;
+}

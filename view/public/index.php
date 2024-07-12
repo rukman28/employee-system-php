@@ -23,14 +23,14 @@ require('../include/html_head.php');
             <!-- Table Start Employee data -->
             <div class="scrollable">
                 <table class="table table-bordered table-striped">
-                    <thead>
+                    <thead class="fixed-head">
                         <tr>
                             <th>EmpNo</th>
                             <th>Name</th>
                             <th>DOB</th>
                             <th>Address</th>
                             <th>Telephone</th>
-                            <th class="text-center">Action</th>
+                            <th>Action</th>
 
                         </tr>
                     </thead>
